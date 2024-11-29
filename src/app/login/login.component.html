@@ -1,0 +1,60 @@
+<div class="w-screen h-screen bg-gray-50 relative sm:bg-gray-50">
+    <div class="absolute w-full h-full hidden sm:block">
+        <img 
+            loading="eager"
+            class="absolute w-96 lg:w-96 left-0 bottom-0" 
+            src="/assets/svg/login-bg-left.svg" 
+            alt="bg left"
+        >
+        <img 
+            loading="eager"
+            class="absolute w-96 lg:w-96 right-0 bottom-0" 
+            src="/assets/svg/login-bg-right.svg" 
+            alt="bg rigth">
+    </div>
+    <div class="relative w-full sm:w-7/12 md:w-6/12 lg:w-4/12 m-auto">
+        <header class="pt-6 pb-2 flex justify-center">
+            <img class="w-56" src="/assets/svg/logo.svg" alt="da">
+        </header>
+        <div class="bg-white rounded shadow py-4 px-6">
+            <div class="mb-4">
+                <h1 class="text-center font-semibold pt-4 pb-8">Iniciar Sesion</h1>
+                <form  novalidate class="space-y-4" (ngSubmit)="login(loginForm)" #loginForm="ngForm">
+                    <div class="relative">
+                        <input type="email" 
+                                class="w-full rounded bg-gray-100 border-2 border-gray-300 text-center" 
+                                placeholder="Ingresa el email" 
+                                id="username" 
+                                name="username" 
+                                [(ngModel)]="username" 
+                                required 
+                                #usernameInput="ngModel">
+                    </div>
+                    <div class="relative">
+                        <input type="password" 
+                                class="w-full rounded bg-gray-100 border-2 border-gray-300 text-center" 
+                                placeholder="Ingresa la contraseña" 
+                                type="password" 
+                                id="password" 
+                                name="password" 
+                                [(ngModel)]="password" 
+                                #passwordInput="ngModel" 
+                                required>
+                    </div>
+                    <div class="flex justify-center">
+                        <button class="bg-green-600 py-2 px-10 text-white rounded" type="submit" >Iniciar</button>
+                        <!-- <app-btn [typeBtn]="'submit'" [colorBtn]="'success'">Log In</app-btn> -->
+                    </div>
+                </form>
+                <hr  class="my-4 border-b-1 border-r-gray-300" />
+            </div>
+            <div class="flex justify-center">
+                <img 
+                    loading="eager"
+                    class="w-32 mt-4"
+                    src="/assets/svg/footer.svg" 
+                    alt="logo">
+            </div>
+        </div>
+    </div>
+</div>

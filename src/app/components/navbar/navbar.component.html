@@ -1,0 +1,29 @@
+<nav class="bg-sky-500 border-gray-200 px-6 shadow-md">
+    <div class="flex flex-wrap justify-between items-center">
+    <div class="flex items-center">
+        <a routerLink="/">
+        <img
+            loading="eager"
+            class="w-20 mr-8"
+            src="/assets/svg/logo.svg"
+            alt="logo"
+        />
+        </a>
+    </div>
+    <div class="flex items-center">
+        <div class="flex space-x-2">
+            <button
+            type="button"
+            class="flex rounded-full text-white"
+            aria-expanded="false"
+            type="button"
+            (click)="logout()"
+            cdkOverlayOrigin
+            >
+            Cerrar sesion
+            </button>
+        </div>
+    </div>
+    </div>
+</nav>
+
